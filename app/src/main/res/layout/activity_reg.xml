@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/reg_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="35dp"
+        android:text="Регистрация"
+        android:textSize="25sp"/>
+
+    <ProgressBar
+        android:id="@+id/reg_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/reg_title"
+        app:layout_constraintBottom_toTopOf="@id/reg_login_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reg_login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/reg_code_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reg_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Логин"
+            android:inputType="text"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reg_code_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/reg_login_layout"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/reg_pass_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reg_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Код регистрации"
+            android:inputType="number"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reg_pass_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/reg_code_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reg_pass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/reg_go_login"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:backgroundTint="@color/main"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toLeftOf="@id/reg_start"
+        app:layout_constraintTop_toTopOf="@id/reg_start"
+        android:layout_marginLeft="20dp"
+        android:text="Войти"/>
+
+    <Button
+        android:id="@+id/reg_start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/reg_go_login"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:backgroundTint="@color/main"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:windowSoftInputMode="adjustResize"
+        android:text="Зарегестрироваться"
+        android:drawableRight="@drawable/arrow_right"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

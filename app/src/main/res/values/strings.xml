@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">iCan</string>
+
+    <string name="item_subtitle_status">Статус выполнения:</string>
+    <string name="item_subtitle_executors">Исполнители:</string>
+    <string name="item_subtitle_time">Выполнить до:</string>
+</resources>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="130dp"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="7dp"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/task_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/task_time"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            style="@style/Text.Title"/>
+        <View
+            android:id="@+id/task_time"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/task_title_time_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/task_time"
+            app:layout_constraintTop_toTopOf="@id/task_time"
+            android:text="@string/item_subtitle_time"
+            android:layout_marginLeft="10dp"
+            style="@style/Text.Subtitle"/>
+
+        <TextView
+            android:id="@+id/task_time_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/task_title_time_date"
+            app:layout_constraintTop_toTopOf="@id/task_title_time_date"
+            android:layout_marginLeft="10dp"
+            style="@style/Text"/>
+
+        <TextView
+            android:id="@+id/task_executors_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/task_title_time_date"
+            app:layout_constraintBottom_toTopOf="@id/task_title_status"
+            app:layout_constraintLeft_toRightOf="@id/task_time"
+            android:text="@string/item_subtitle_executors"
+            style="@style/Text.Subtitle"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/task_executors"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/task_executors_title"
+            app:layout_constraintBottom_toBottomOf="@id/task_executors_title"
+            app:layout_constraintLeft_toRightOf="@id/task_executors_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginHorizontal="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/task_title_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/task_time"
+            app:layout_constraintBottom_toBottomOf="@id/task_time"
+            android:text="@string/item_subtitle_status"
+            android:layout_marginLeft="10dp"
+            style="@style/Text.Subtitle"/>
+
+        <TextView
+            android:id="@+id/task_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/task_title_status"
+            app:layout_constraintBottom_toBottomOf="@id/task_title_status"
+            app:layout_constraintTop_toTopOf="@id/task_title_status"
+            android:layout_marginLeft="10dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

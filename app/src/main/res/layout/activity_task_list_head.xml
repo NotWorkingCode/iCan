@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <include
+       layout="@layout/include_head_filter"
+       android:id="@+id/head_filter"
+       android:layout_height="wrap_content"
+       android:layout_width="match_parent"
+       app:layout_constraintBottom_toTopOf="parent"/>
+
+   <LinearLayout
+       android:id="@+id/head_content"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       app:layout_constraintTop_toBottomOf="@id/head_filter"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:animateLayoutChanges="true"
+       android:background="@color/card_color">
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/head_task_recycler"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginHorizontal="10dp"/>
+   </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

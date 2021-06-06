@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/main</item>
+        <item name="colorPrimaryDark">@color/main_dark</item>
+        <item name="colorSecondary">@color/secondary</item>
+    </style>
+    <style name="AppTheme.Launcher" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_launch</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+    </style>
+
+    <style name="Chip" parent="Widget.MaterialComponents.Chip.Entry">
+        <item name="chipIconEnabled">false</item>
+        <item name="font">@font/raleway_t</item>
+    </style>
+    <style name="Chip.Group">
+        <item name="android:backgroundTint">@color/background_chip_group</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Chip.Grey">
+        <item name="android:backgroundTint">@color/background_chip_grey</item>
+    </style>
+    <style name="Chip.Orange">
+        <item name="android:backgroundTint">@color/background_chip_orange</item>
+    </style>
+    <style name="Chip.Green">
+        <item name="android:backgroundTint">@color/background_chip_green</item>
+    </style>
+    <style name="Chip.Red">
+        <item name="android:backgroundTint">@color/background_chip_red</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Chip.Archive">
+        <item name="android:backgroundTint">@color/background_chip_archive</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text">
+        <item name="font">@font/raleway_t</item>
+    </style>
+    <style name="Text.Title">
+        <item name="font">@font/raleway_r</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="Text.Subtitle">
+        <item name="font">@font/raleway_t</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

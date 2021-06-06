@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Заголовок задачи:"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/create_task_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="text"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Описание задачи: "
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/create_task_body"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:inputType="textMultiLine"
+            android:gravity="top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Отдел: "
+            android:layout_marginTop="10dp"/>
+        <Spinner
+            android:id="@+id/create_task_department"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Исполнитель: "
+            android:layout_marginTop="10dp"/>
+        <Spinner
+            android:id="@+id/create_task_executor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/create_task_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/main"
+            android:text="Выбрать дату сдачи"/>
+        <Button
+            android:id="@+id/create_task_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/main"
+            android:text="Создать"/>
+
+        <ProgressBar
+            android:id="@+id/create_task_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</ScrollView>

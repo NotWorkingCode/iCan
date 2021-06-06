@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <HorizontalScrollView
+        android:id="@+id/t_title_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:scrollbars="none">
+        <TextView
+            android:id="@+id/t_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="23dp"/>
+    </HorizontalScrollView>
+
+
+    <View
+        android:id="@+id/t_sep1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/card_separator"
+        app:layout_constraintTop_toBottomOf="@id/t_title_scroll"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/t_executor_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/t_sep1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:paddingLeft="30dp"
+        android:text="Исполнитель: "
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/t_executor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/t_executor_title"
+        app:layout_constraintLeft_toRightOf="@id/t_executor_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:paddingHorizontal="5dp"/>
+
+    <View
+        android:id="@+id/t_sep2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/card_separator"
+        app:layout_constraintTop_toBottomOf="@id/t_executor_title"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/t_creator_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/t_sep2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:paddingLeft="30dp"
+        android:text="Создатель: "
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/t_creator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/t_creator_title"
+        app:layout_constraintLeft_toRightOf="@id/t_creator_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:paddingHorizontal="5dp"/>
+
+    <View
+        android:id="@+id/t_sep3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/card_separator"
+        app:layout_constraintTop_toBottomOf="@id/t_creator_title"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/t_deadline_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/t_sep3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:paddingLeft="30dp"
+        android:text="Дней до дедлайна: "
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/t_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/t_sep3"
+        app:layout_constraintBottom_toTopOf="@id/t_sep4"
+        app:layout_constraintLeft_toRightOf="@id/t_deadline_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:paddingHorizontal="5dp"/>
+
+    <View
+        android:id="@+id/t_sep4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/card_separator"
+        app:layout_constraintTop_toBottomOf="@id/t_deadline_title"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <ProgressBar
+        android:id="@+id/t_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/t_sep4"
+        app:layout_constraintBottom_toTopOf="@id/t_status_button"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Описание задачи: "
+                android:textColor="@color/black"
+                android:paddingRight="7dp"/>
+            <TextView
+                android:id="@+id/t_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/t_status_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/main"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Логин пользователя: "
+        android:layout_margin="10dp"/>
+    <EditText
+        android:id="@+id/create_user_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Имя пользователя: "
+        android:layout_margin="10dp"/>
+    <EditText
+        android:id="@+id/create_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Роль пользователя: "
+        android:layout_margin="10dp"/>
+    <Spinner
+        android:id="@+id/create_user_role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"/>
+    <LinearLayout
+        android:id="@+id/create_user_department_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Отдел:"
+            android:layout_margin="10dp"/>
+        <Spinner
+            android:id="@+id/create_user_department"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/create_user_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Создать"
+        android:backgroundTint="@color/main"/>
+</LinearLayout>

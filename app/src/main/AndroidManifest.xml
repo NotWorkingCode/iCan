@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="not.working.code.ican">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".app.activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".app.activities.MainActivity"/>
+        <activity android:name=".app.activities.LoginActivity"/>
+        <activity android:name=".app.activities.TaskListHeadActivity"/>
+        <activity android:name=".app.activities.TaskListWorkerActivity"/>
+        <activity android:name=".app.activities.TaskActivity"/>
+        <activity android:name=".app.activities.SettingsHeadActivity"/>
+        <activity android:name=".app.activities.CreateTaskActivity"/>
+        <activity android:name=".app.activities.CreateUserActivity"/>
+        <activity android:name=".app.activities.RegActivity"/>
+    </application>
+
+</manifest>
